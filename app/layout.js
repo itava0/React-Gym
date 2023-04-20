@@ -1,5 +1,6 @@
 import Navbar from '@/components/Nav/Navbar';
 import Hero from '@/components/Hero/Hero';
+import About from '@/components/About/About';
 import './globals.css';
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
       <Navbar />
       <Hero />
+      <About />
         </body>
     </html>
   );
