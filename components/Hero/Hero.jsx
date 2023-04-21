@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import TitleBg from "../../public/titlebg.svg";
 import MainButton from "../Button/MainButton";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <>
     <section
@@ -19,7 +20,7 @@ export default function Hero() {
           <p className="text-black text-[16px] uppercase font-medium relative z-10 pl-16 min800:pl-0 mb-8">
             find your energy
           </p>
-          <img
+          <Image
             src={TitleBg}
             alt="text_bg"
             className=" w-[52%] absolute -top-3 title-white min800:w-[24rem] "
@@ -41,3 +42,5 @@ export default function Hero() {
   </>
   )
 }
+
+export default Hero;

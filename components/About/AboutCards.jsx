@@ -1,6 +1,6 @@
 import { cardList } from "./CardList";
 
-export default function AboutCards() {
+const AboutCards = () => {
   return (
     <>
       {cardList.map((card, id) => (
@@ -17,3 +17,5 @@ export default function AboutCards() {
     </>
   )
 }
+
+export default AboutCards;

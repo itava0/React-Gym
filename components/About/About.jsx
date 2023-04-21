@@ -1,12 +1,13 @@
 "use client";
-
-import AboutCards from "./AboutCards"
+import Image from "next/image";
+import AboutCards from "./AboutCards";
 import TitleRed from "../../public/About/titlebg.svg";
 import GirlRunning from "../../public/About/girl-run.png";
 import GirlRedBg from "../../public/About/girl-redbg.svg";
 import GirlText from "../../public/About/girl-side-text.png";
 import MainButton from "../Button/MainButton";
-export default function About() {
+
+const About = () => {
   return (
     <>
       <section className="flex flex-col justify-between gap-2 about-section pb-[20rem]">
@@ -26,7 +27,7 @@ export default function About() {
               <p className="text-white font-semibold text-[15px] relative uppercase z-10 pl-16 md1000:pl-0 mb-12">
                 who we are
               </p>
-              <img
+              <Image
                 src={TitleRed}
                 alt="text_bg"
                 className="w-[31%] absolute -top-[6px] md1000:w-[22rem]"
@@ -73,13 +74,13 @@ export default function About() {
             </div>
             {/* img side */}
             <div className="relative md1000:hidden">
-              <img
+              <Image
                 src={GirlRunning}
                 alt="girl_running"
                 className="girl-running"
               />
-              <img src={GirlRedBg} alt="bg-red" className="girl-bg" />
-              <img src={GirlText} alt="bg-text" className="girl-text" />
+              <Image src={GirlRedBg} alt="bg-red" className="girl-bg" />
+              <Image src={GirlText} alt="bg-text" className="girl-text" />
             </div>
           </div>
         </div>
@@ -87,3 +88,5 @@ export default function About() {
     </>
   )
 }
+
+export default About;

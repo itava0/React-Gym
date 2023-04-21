@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image'
 import NavList from './NavList';
 import HamburgerList from './HamburgerList';
 import Link from 'next/link';
 import Logo from '../../public/logo.svg';
 
-export default function Navbar() {
+const Navbar = () =>  {
   const [spin, setSpin] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -28,8 +29,6 @@ export default function Navbar() {
     }
   };
 
-  window.addEventListener('scroll', handleScroll);
-
   return (
     <>
       <nav
@@ -38,7 +37,7 @@ export default function Navbar() {
         }`}
       >
         <Link href="/" className=" white w-48 hamburger-logo">
-          <img src={Logo} alt="logo_img" className=" h-auto" />
+          <Image src={Logo} alt="logo_img" className=" h-auto" />
         </Link>
         <section className="flex lg:hidden">
           <div
@@ -111,3 +110,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;
