@@ -4,8 +4,6 @@ import Hero from '@/components/Hero/Hero';
 import About from '@/components/About/About';
 import { Footer } from '@/components/Footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center">
