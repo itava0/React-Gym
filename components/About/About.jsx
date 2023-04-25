@@ -10,7 +10,7 @@ import MainButton from "../Button/MainButton";
 const About = () => {
   return (
     <>
-      <section className="flex flex-col justify-between gap-2 about-section pb-[20rem]">
+      <section className="flex flex-col justify-between gap-2 about-section pb-[20rem] max-md:pb-[10rem]">
         <div className="container page-padding">
           {/* about cards */}
           <div className="about-cards flex gap-10 -mt-[8.5rem] max-md:flex-col">
