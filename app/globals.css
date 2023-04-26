@@ -131,13 +131,19 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 120vh;
+  height: 100vh;
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
 }
 
 /* MEDIA QUERIES --------------------------------*/
+
+@media (max-width: 1000px){
+  .hideSideImage {
+    display: none;
+  }
+}
 
 @media (max-width: 750px) {
   .fa-bars {
