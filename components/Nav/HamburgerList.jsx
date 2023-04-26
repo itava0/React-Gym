@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function HamburgerList() {
+ const HamburgerList = () => {
   return (
     <ul className="flex flex-col items-center justify-between min-h-[250px]">
       <li
@@ -48,3 +48,5 @@ export default function HamburgerList() {
     </ul>
   );
 }
+
+export default HamburgerList;

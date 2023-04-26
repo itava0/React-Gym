@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavList() {
+const NavList = () => {
       return (
         <>
           <ul className="flex gap-9 text-white text-[16px] font-medium xl:none">
@@ -62,3 +62,5 @@ export default function NavList() {
         </>
   );
 }
+
+export default NavList;

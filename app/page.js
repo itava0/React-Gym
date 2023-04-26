@@ -1,12 +1,16 @@
 import { Inter } from 'next/font/google';
+import Navbar from '@/components/Nav/Navbar';
+import Hero from '@/components/Hero/Hero';
+import About from '@/components/About/About';
+import { Footer } from '@/components/Footer/Footer';
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1>Hello</h1>
+    <main className="flex min-h-screen flex-col items-center">
+      <Navbar />
+      <Hero />
+      <About />
+      <Footer />
     </main>
-  )
+  );
 }

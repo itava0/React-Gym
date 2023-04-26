@@ -1,15 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image'
 import NavList from './NavList';
 import HamburgerList from './HamburgerList';
 import Link from 'next/link';
 import Logo from '../../public/logo.svg';
 
-export default function Navbar() {
+const Navbar = () =>  {
   const [spin, setSpin] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+
+  //handleScroll function that sets the sticky state variable based on the window.pageYOffset. 
+  const handleScroll = () => {
+    if (window.pageYOffset > 10) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
+  // useEffect hook is used to add and remove the scroll event listener on the window object. 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleNav = () => {
+    setIsNavOpen(prev => !prev);
+  };
 
   const joinSpin = () => {
     setSpin(true);
@@ -19,31 +40,20 @@ export default function Navbar() {
     setSpin(false);
   };
 
-  // sticky navbar - bg black
-  const handleScroll = () => {
-    if (window.scrollY > 10) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
-
   return (
     <>
       <nav
-        className={`flex flex-row justify-between shadow-xl !bg-black items-center py-8 px-12 fixed top-0 left-0 right-0 w-full z-50 ${
+        className={`flex flex-row justify-between shadow-xl !bg-black items-center py-8 px-8 fixed top-0 left-0 right-0 w-full z-50 ${
           sticky ? 'shadow-xl !bg-black' : ''
         }`}
       >
-        <Link href="/" className=" white w-48 hamburger-logo">
-          <img src={Logo} alt="logo_img" className=" h-auto" />
+        <Link href="/" className=" white lg:w-28 hamburger-logo">
+          <Image src={Logo} alt="logo_img" className=" h-auto" />
         </Link>
         <section className="flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
-            onClick={() => setIsNavOpen((prev) => !prev)}
+            className=" space-y-2"
+            onClick={toggleNav}
           >
             <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
             <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
@@ -53,7 +63,7 @@ export default function Navbar() {
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
               className="absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)}
+              onClick={toggleNav}
             >
               <svg
                 className="h-8 w-8 text-gray-600"
@@ -111,3 +121,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;
