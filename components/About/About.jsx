@@ -20,7 +20,7 @@ const About = () => {
           {/* text-img div */}
           <div
             id="about"
-            className=" grid grid-cols-[50fr,50fr] gap-[3rem] max-md:grid-cols-1"
+            className=" grid lg:grid-cols-[50fr,50fr] gap-[3rem] max-md:grid-cols-1"
           >
             {/* about text */}
             <div className="mt-[10.5rem] relative md:items-center md:flex md:flex-col md:text-center md:w-[full]">
@@ -72,7 +72,7 @@ const About = () => {
               />
             </div>
             {/* img side */}
-            <div className="relative max-md:hidden">
+            <div className="relative hideSideImage">
               <Image
                 src={GirlRunning}
                 alt="girl_running"

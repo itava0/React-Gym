@@ -50,7 +50,7 @@ const Navbar = () =>  {
         <Link href="/" className=" white lg:w-28 hamburger-logo">
           <Image src={Logo} alt="logo_img" className=" h-auto" />
         </Link>
-        <section className="flex lg:hidden">
+        <section className="flex md:hidden">
           <div
             className=" space-y-2"
             onClick={toggleNav}
@@ -81,13 +81,13 @@ const Navbar = () =>  {
             <HamburgerList />
           </div>
         </section>
-        <div className="navlist-nav">
+        <div className="navlist-nav max-md:hidden">
           <NavList />
         </div>
         {/* Sign up */}
-        <div className=" border-[rgb(255,255,255,0.3)] border-solid border-2  p-2 rounded-md signup-bt">
+        <div className=" border-[rgb(255,255,255,0.3)] border-solid border-2  p-2 rounded-md signup-bt max-md:hidden">
           <Link
-            href="/signup"
+            href="/memberships"
             onMouseEnter={joinSpin}
             onMouseLeave={stopSpin}
             className="flex items-center "

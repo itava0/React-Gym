@@ -37,19 +37,19 @@ export const Footer = () => {
               <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#ff0366]"></span>
 
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Fitness Classes
+                BodyPump
               </p>
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Aerobics Classes
+                Zumba
               </p>
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Power Yoga
+                Yoga
               </p>
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Learn Machines
+                Burn45
               </p>
               <p className="text-[16px] hover:text-[#ff0366] cursor-pointer text-[#646464] font-medium hover:font-bold">
-                Full-body Strength
+                Fit Cycle
               </p>
             </div>
 
