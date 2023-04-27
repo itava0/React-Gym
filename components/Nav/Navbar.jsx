@@ -87,7 +87,7 @@ const Navbar = () =>  {
         {/* Sign up */}
         <div className=" border-[rgb(255,255,255,0.3)] border-solid border-2  p-2 rounded-md signup-bt max-md:hidden">
           <Link
-            href="/signup"
+            href="/memberships"
             onMouseEnter={joinSpin}
             onMouseLeave={stopSpin}
             className="flex items-center "
