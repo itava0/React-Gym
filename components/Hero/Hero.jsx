@@ -33,6 +33,7 @@ const Hero = () => {
           <MainButton
             color={`text-black`}
             bg={`bg-white`}
+            cN="hero-cta"
             text="our classes"
             goTo="/classes"
           />
