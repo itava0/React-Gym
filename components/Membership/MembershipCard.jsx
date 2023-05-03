@@ -1,7 +1,6 @@
 "use client";
 
 import MainButton from "../Button/MainButton";
-import { useRouter } from 'next/navigation';
 import { MembershipCardList } from "./MembershipCardList";
 
 function MembershipCard() {
