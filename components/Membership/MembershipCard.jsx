@@ -1,4 +1,7 @@
+"use client";
+
 import MainButton from "../Button/MainButton";
+import { useRouter } from 'next/navigation';
 import { MembershipCardList } from "./MembershipCardList";
 
 function MembershipCard() {
@@ -30,7 +33,7 @@ function MembershipCard() {
             text="Join Now"
             arrowColor={`!text-white`}
             cN="pricing-cta"
-            goTo="/Checkout"
+            goTo={`/checkout?price=${card.price}`}
           />
         </section>
       ))}
