@@ -30,9 +30,6 @@ app.delete('/users/:id', db.deleteUser);
 
 app.post('/create-payment-intent', payment.submitPayment);
 
-process.env.STATUS === 'production'
-  ? (port = process.env.PROD_PORT)
-  : (port = process.env.DEV_PORT);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
