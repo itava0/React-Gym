@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 const db = require('./queries');
 const payment = require('./route/checkout');
-let port;
+const port = process.env.PORT || 8080;
 
 // Middlewares here 
 app.use(express.static("public"));
