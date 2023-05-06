@@ -17,7 +17,7 @@ const App= () => {
   
 
   useEffect(() => {
-    fetch("http://localhost:8000/create-payment-intent", {
+    fetch("https://react-gym.azurewebsites.net/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ data: { price } }),
