@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <form
-      action="react-gym.azurewebsites.net/create-checkout-session"
+      action="https://react-gym.azurewebsites.net/create-checkout-session"
       method="POST"
     >
       <input type="hidden" name="priceId" value={priceId} />
