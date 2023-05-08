@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const MainButton = ({ color, bg, cN, arrowColor, hover, text, goTo }) => {
+const MainButton = ({ color, bg, cN, hover, text, goTo }) => {
   return (
     <Link
       href={goTo}

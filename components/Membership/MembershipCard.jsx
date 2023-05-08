@@ -1,9 +1,37 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import MainButton from "../Button/MainButton";
 import { MembershipCardList } from "./MembershipCardList";
 
 function MembershipCard() {
+  const [priceId, setPriceId] = useState('');
+
+  useEffect(() => {
+    if (priceId) {
+      fetch("http://localhost:8000/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId }),
+      })
+    }
+  }, [priceId]);
+
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('success')) {
+      console.log('Order placed! You will receive an email confirmation.');
+    }
+
+    if (query.get('canceled')) {
+      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+    }
+  }, []);
+
+  const handleSignUp = (id) => {
+    setPriceId(id);
+  }
+
   return (
     <div className="space-y-8 md:flex lg:gap-[10rem] md:justify-center md:space-y-0 md:space-x-8">
       {MembershipCardList.map((card, id) => (
@@ -30,10 +58,10 @@ function MembershipCard() {
             color={`!text-white`}
             bg={`bg-[#ff0336]`}
             text="Join Now"
-            arrowColor={`!text-white`}
             cN="pricing-cta"
-            goTo={`/checkout?price=${card.price}`}
-          />
+            goTo={`/checkout?id=${card.Price_ID}`}
+          >
+          </MainButton>
         </section>
       ))}
     </div>
@@ -41,3 +69,4 @@ function MembershipCard() {
 }
 
 export default MembershipCard;
+
