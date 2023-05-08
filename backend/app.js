@@ -4,6 +4,7 @@ require("dotenv").config();
 const app = express();
 const db = require('./queries');
 const payment = require('./route/checkout');
+const subscription = require('./route/webhook');
 const port = process.env.PORT || 8080;
 
 // Middlewares here 
@@ -28,7 +29,8 @@ app.post('/users', db.createUser);
 app.put('/users/:id', db.updateUser);
 app.delete('/users/:id', db.deleteUser);
 
-app.post('/create-payment-intent', payment.submitPayment);
+app.post('/create-checkout-session', payment.submitPayment);
+app.post('/webhook', subscription.manageSubcription);
 
 
 app.listen(port, () => {
