@@ -7,18 +7,6 @@ const App= () => {
   const searchParams = useSearchParams();
 
   const priceId = searchParams.get('id');
-
-  useEffect(() => {
-    fetch("https://react-gym.azurewebsites.net/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ priceId }),
-    })
-      .then((res) => res.json());
-  }, [priceId]);
-
-
-
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
@@ -32,7 +20,7 @@ const App= () => {
   }, []);
 
   return (
-    <form action="http://localhost:8000/create-checkout-session" method="POST">
+    <form action="react-gym.azurewebsites.net/create-checkout-session" method="POST">
       <input type="hidden" name="priceId" value={priceId} />
       <section>
         <button type="submit" role="link">
