@@ -1,9 +1,8 @@
-"use client";
-import { useState, useEffect } from "react";
+'use client';
+import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-const App= () => {
-
+const App = () => {
   const searchParams = useSearchParams();
 
   const priceId = searchParams.get('id');
@@ -15,12 +14,17 @@ const App= () => {
     }
 
     if (query.get('canceled')) {
-      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+      console.log(
+        'Order canceled -- continue to shop around and checkout when you’re ready.'
+      );
     }
   }, []);
 
   return (
-    <form action="react-gym.azurewebsites.net/create-checkout-session" method="POST">
+    <form
+      action="react-gym.azurewebsites.net/create-checkout-session"
+      method="POST"
+    >
       <input type="hidden" name="priceId" value={priceId} />
       <section>
         <button type="submit" role="link">
@@ -56,7 +60,6 @@ const App= () => {
       </style>
     </form>
   );
-}
+};
 
 export default App;
-
