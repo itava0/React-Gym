@@ -1,5 +1,3 @@
-"use client";
-import { useState, useEffect } from "react";
 import MainButton from "../Button/MainButton";
 import { MembershipCardList } from "./MembershipCardList";
 
@@ -31,7 +29,7 @@ function MembershipCard() {
             bg={`bg-[#ff0336]`}
             text="Join Now"
             cN="pricing-cta"
-            goTo={`/checkout?id=${card.Price_ID}`}
+            goTo={`/checkout?id=${card.Price_ID}&price=${card.price}`}
           >
           </MainButton>
         </section>
