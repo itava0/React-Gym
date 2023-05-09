@@ -1,14 +1,14 @@
 
 # React Gym
 
-This application is a gym membershipt system that allows users to manage their membership, trainers, and classes, as well as schedule appointments. It is built using Next.js, Node.js, Express, Stripe, and Postgress.
+This application is a gym membership system that allows users to manage their membership, trainers, and classes, as well as schedule appointments. It is built using Next.js, Node.js, Express, Stripe, and Postgres.
 
 
 
 ## Features
 
 - Manage membership: subscribe and cancel membership.
-- Manage trainers: Sign up fo personal trainers.
+- Manage trainers: Sign up for personal trainers.
 - Manage classes: Sign up for classes.
 - Schedule appointments: Schedule appointments for with    trainers.
 
