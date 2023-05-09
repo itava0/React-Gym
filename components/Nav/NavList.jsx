@@ -26,7 +26,7 @@ const NavList = () => {
               style={{ transition: 'all 0.3s' }}
               className=" cursor-pointer hover:text-[#ff0336]"
             >
-              <Link href="/stories">Stories</Link>
+              <Link href="/blog">Our Blog</Link>
             </li>
             <li
               style={{ transition: 'all 0.3s' }}
