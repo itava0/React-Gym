@@ -117,7 +117,7 @@ const Navbar = () =>  {
             </h3>
           </Link>
         </div>
-        </nav>
+      </nav>
     </>
   );
 }

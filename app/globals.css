@@ -16,6 +16,11 @@ html {
   font-size: 62.5%;
 }
 
+label, input {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -156,6 +161,114 @@ body {
   background-color: #c6022a;
 }
 
+/* blog section */
+.cta-section {
+  background-image: url('../public/About/background.jpg');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* cta banner */
+
+.cta-banner-btn {
+  padding: 18px 22px;
+}
+
+/* blog page */
+
+.blog-cta {
+  padding: 18px 22px;
+  margin-left: 0;
+}
+
+.banner-shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+
+/* login */
+.class-section {
+  background-image: url('../public/About/background.jpg');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.class-banner {
+  background-image: url('../public/classes/banner.jpg');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 45vh;
+}
+
+
+/* classes page ----- */
+
+.cycling-bg,
+.power-bg,
+.yoga-bg,
+.zumba-bg,
+.workout-bg,
+.crossfit-bg,
+.bodyPump-bg,
+.burn45-bg,
+.run-bg {
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cycling-bg {
+  background-image: url('../public/classes/cycling.jpg');
+}
+
+.meditaion-bg {
+  background-image: url('../public/classes/yoga.jpg');
+}
+
+
+.bodyPump-bg {
+  background-image: url('../public/classes/BodyPump.jpg');
+}
+
+.burn45-bg {
+  background-image: url('../public/classes/burn45.jpg');
+}
+
+.crossfit-bg {
+  background-image: url('../public/classes/crossfit.jpg');
+}
+
+.running-bg {
+  background-image: url('../public/classes/running.jpg');
+}
+
+
+.workout-bg {
+  background-image: url('../public/classes/workout.jpg');
+}
+
+.yoga-bg {
+  background-image: url('../public/classes/yoga.jpg');
+}
+
+.fitness-bg {
+  background-image: url('../public/classes/fitness.jpg');
+}
+
+.zumba-bg {
+  background-image: url('../public/classes/zumba.jpg');
+}
 
 
 /* MEDIA QUERIES --------------------------------*/
