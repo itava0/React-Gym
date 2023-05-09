@@ -1,6 +1,7 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); 
 
-const YOUR_DOMAIN = 'https://react-gym-bice.vercel.app';
+//'https://react-gym-bice.vercel.app'
+const YOUR_DOMAIN = 'https://react-gym-bice.vercel.app'
 
 const submitPayment = async (req, res) => {
   const {priceId} = req.body;
