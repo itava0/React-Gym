@@ -16,6 +16,11 @@ html {
   font-size: 62.5%;
 }
 
+label, input {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
