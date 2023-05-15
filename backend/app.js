@@ -5,7 +5,8 @@ const app = express();
 const db = require('./queries');
 const payment = require('./route/checkout');
 const subscription = require('./route/webhook');
-const register = require('./route/auth');
+const auth = require('./route/auth');
+
 const port = process.env.PORT || 8080;
 
 // Middlewares here
@@ -32,7 +33,9 @@ app.delete('/users/:id', db.deleteUser);
 app.post('/create-checkout-session', payment.submitPayment);
 app.post('/webhook', subscription.manageSubcription);
 
-app.post('/auth/register', register.registeredUser);
+// Authentication endpoint
+app.post('/auth/register', auth.registeredUser);
+app.post('/auth/login', auth.loginUser);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
