@@ -1,14 +1,7 @@
 "use client";
 import { useState } from 'react';
 
-function Profile() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [birthdate, setBirthdate] = useState('');
-  const [gender, setGender] = useState('');
-  const [address, setAddress] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [email, setEmail] = useState('');
+function Profile({setFirstName, setLastName, setBirthdate, setGender, setAddress, setPhoneNumber, setEmail}) {
   return (
     <div>
       <div className="w-full bg-white px-10">
