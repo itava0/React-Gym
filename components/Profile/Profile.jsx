@@ -1,14 +1,8 @@
 "use client";
 import { useState } from 'react';
 
-function Profile() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [birthdate, setBirthdate] = useState('');
-  const [gender, setGender] = useState('');
-  const [address, setAddress] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [email, setEmail] = useState('');
+function Profile({setFirstName, setLastName, setBirthdate, setGender, setHomeAddress, setCity, setState, setZipCode, setPhoneNumber, setEmail}) {
+
   return (
     <div>
       <div className="w-full bg-white px-10">
@@ -88,7 +82,7 @@ function Profile() {
               tabIndex={0}
               aria-label="Enter Home Address"
               className="w-64 mb-3 bg-gray-100 text-md font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e) => setHomeAddress(e.target.value)}
             />
           </div>
           <div className="flex flex-col md:ml-12 md:mt-0 mt-8">
@@ -100,7 +94,7 @@ function Profile() {
               tabIndex={0}
               aria-label="Enter City Address"
               className="w-64 mb-3 bg-gray-100 text-md font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e) => setCity(e.target.value)}
             />
           </div>
         </div>
@@ -114,7 +108,7 @@ function Profile() {
               tabIndex={0}
               aria-label="Enter State Address"
               className="w-64 mb-3 bg-gray-100 text-md font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e) => setState(e.target.value)}
             />
           </div>
           <div className="flex flex-col md:ml-12 md:mt-0 mt-8">
@@ -126,7 +120,7 @@ function Profile() {
               tabIndex={0}
               aria-label="Enter Zip Code Address"
               className="w-64 mb-3 bg-gray-100 text-md font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"
-              onChange={(e) => setAddress(e.target.value)}
+              onChange={(e) => setZipCode(e.target.value)}
             />
           </div>
         </div>
@@ -136,24 +130,24 @@ function Profile() {
               Date of birth
             </label>
             <input
-              type
+              type="date"
               tabIndex={0}
               aria-label="Enter date of birth"
               className="w-64 mb-3 bg-gray-100 text-md font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"
               onChange={(e) => setBirthdate(e.target.value)}
             />
           </div>
-          <div className="flex flex-col md:ml-12 md:mt-0 mt-8" onChange={(e) => setGender(e.target.value)}>
+          <div className="flex flex-col md:ml-12 md:mt-0 mt-8">
             <label className="mb-3 text-lg leading-none text-gray-800">
               Gender
             </label>
             <div className="flex items-center ml-6 mb-2">
               <div className="bg-white rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
                 <input
-                  defaultChecked
                   type="radio"
                   value="Male"
                   name="gender"
+                  onChange={(e) => setGender(e.target.value)}
                   className="checkbox mb-3 appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none"
                 />
                 <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1" />
@@ -170,6 +164,7 @@ function Profile() {
                   type="radio"
                   value="Female"
                   name="gender"
+                  onChange={(e) => setGender(e.target.value)}
                   className="checkbox  mb-3 appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none"
                 />
                 <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1" />
@@ -186,6 +181,7 @@ function Profile() {
                   type="radio"
                   value="Other"
                   name="gender"
+                  onChange={(e) => setGender(e.target.value)}
                   className="checkbox  mb-3 appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none"
                 />
                 <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1" />

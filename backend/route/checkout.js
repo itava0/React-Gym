@@ -4,11 +4,12 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const YOUR_DOMAIN = 'https://react-gym-bice.vercel.app'
 
 const submitPayment = async (req, res) => {
-  const {priceId} = req.body;
+  const {priceId , email} = req.body;
 
   const session = await stripe.checkout.sessions.create({
-    success_url: `${YOUR_DOMAIN}?success=true`,
+    success_url: `${YOUR_DOMAIN}/registration`,
     cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+    customer_email: email,
     payment_method_types: ['card'],
     line_items: [
       {price: priceId, quantity: 1},

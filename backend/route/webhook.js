@@ -4,7 +4,7 @@ const manageSubcription = async (req, res) => {
   let data;
   let eventType;
   // Check if webhook signing is configured.
-  const webhookSecret = "whsec_56693b3ba9a48e29b358700cb5db48416becb2971b0b5d79c6272423cbea0063";
+  const webhookSecret = process.env.WEB_HOOK_SECRET;
 
   if (webhookSecret) {
     // Retrieve the event by verifying the signature using the raw body and secret.
