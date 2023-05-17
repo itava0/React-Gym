@@ -1,5 +1,5 @@
 const pg = require('pg');
-const conString = "postgres://nbwrnbuh:XmOpHFBnXD9NDXMEThGrNE6tzHbG8oEf@drona.db.elephantsql.com/nbwrnbuh"
+const conString =process.env.DB_URL
 const client = new pg.Client(conString);
 
 
