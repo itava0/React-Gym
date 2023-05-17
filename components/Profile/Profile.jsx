@@ -144,7 +144,6 @@ function Profile({setFirstName, setLastName, setBirthdate, setGender, setHomeAdd
             <div className="flex items-center ml-6 mb-2">
               <div className="bg-white rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
                 <input
-                  defaultChecked
                   type="radio"
                   value="Male"
                   name="gender"
