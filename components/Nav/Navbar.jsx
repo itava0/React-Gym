@@ -43,7 +43,7 @@ const Navbar = () =>  {
   return (
     <>
       <nav
-        className={`flex flex-row justify-between shadow-xl !bg-black items-center py-8 px-8 fixed top-0 left-0 right-0 w-full z-50 ${
+        className={`flex flex-row justify-between shadow-xl !bg-black items-center px-8 fixed top-0 left-0 right-0 w-full z-50 ${
           sticky ? 'shadow-xl !bg-black' : ''
         }`}
       >
