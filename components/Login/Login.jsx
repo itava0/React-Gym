@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 
 function Login() {
   const [sidebar, setsidebar] = useState();
@@ -19,15 +20,15 @@ function Login() {
           </p>
           <p className="text-md mt-4 font-medium leading-none text-gray-500">
             Dont have account?{' '}
-            <span
+            <Link
               tabIndex={0}
-              role="link"
+              href="/registration"
               aria-label="Sign up here"
               className="text-md font-medium leading-none underline text-gray-800 cursor-pointer"
             >
               {' '}
               Sign up here
-            </span>
+            </Link>
           </p>
           <button
             aria-label="Sign in with google"
