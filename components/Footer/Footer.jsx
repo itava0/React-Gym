@@ -98,7 +98,7 @@ export const Footer = () => {
           <p className="text-lg font-medium text-gray-900">About Us</p>
 
           <nav aria-label="Footer About Nav" className="mt-8">
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-4 text-md">
               <li>
                 <a
                   className="text-gray-700 transition hover:text-gray-700/75"
@@ -122,15 +122,6 @@ export const Footer = () => {
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/"
                 >
-                  Employee Handbook
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
                   Careers
                 </a>
               </li>
@@ -142,13 +133,22 @@ export const Footer = () => {
           <p className="text-lg font-medium text-gray-900">Our Services</p>
 
           <nav aria-label="Footer Services Nav" className="mt-8">
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-4 text-md">
               <li>
                 <a
                   className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
+                  href="/classes"
                 >
-                  Web Development
+                  Classes
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-700 transition hover:text-gray-700/75"
+                  href="/memberships"
+                >
+                  Membership
                 </a>
               </li>
 
@@ -157,7 +157,7 @@ export const Footer = () => {
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/"
                 >
-                  Web Design
+                  Policies
                 </a>
               </li>
 
@@ -166,16 +166,7 @@ export const Footer = () => {
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/"
                 >
-                  Marketing
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
-                  Google Ads
+                  Google Play
                 </a>
               </li>
             </ul>
@@ -186,7 +177,7 @@ export const Footer = () => {
           <p className="text-lg font-medium text-gray-900">Helpful Links</p>
 
           <nav aria-label="Footer Helpful Nav" className="mt-8">
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-4 text-lg">
               <li>
                 <a
                   className="text-gray-700 transition hover:text-gray-700/75"
@@ -204,28 +195,6 @@ export const Footer = () => {
                   Support
                 </a>
               </li>
-
-              <li>
-                <a
-                  className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                  href="/"
-                >
-                  <span
-                    className="text-gray-700 transition group-hover:text-gray-700/75"
-                  >
-                    Live Chat
-                  </span>
-
-                  <span className="relative flex h-2 w-2">
-                    <span
-                      className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"
-                    ></span>
-                    <span
-                      className="relative inline-flex h-2 w-2 rounded-full bg-teal-500"
-                    ></span>
-                  </span>
-                </a>
-              </li>
             </ul>
           </nav>
         </div>
@@ -233,7 +202,7 @@ export const Footer = () => {
         <div className="text-center sm:text-left">
           <p className="text-lg font-medium text-gray-900">Contact Us</p>
 
-          <ul className="mt-8 space-y-4 text-sm">
+          <ul className="mt-8 space-y-4 text-md">
             <li>
               <a
                 className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
@@ -320,7 +289,7 @@ export const Footer = () => {
           <span className="block sm:inline">All rights reserved.</span>
 
           <a
-            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            className="inline-block text-indigo-600 underline transition hover:text-indigo-600/75"
             href="/"
           >
             Terms & Conditions
@@ -329,7 +298,7 @@ export const Footer = () => {
           <span>&middot;</span>
 
           <a
-            className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            className="inline-block text-indigo-600 underline transition hover:text-indigo-600/75"
             href="/"
           >
             Privacy Policy
